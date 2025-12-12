@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Purple Lightning | Shop</title>
+<link rel="stylesheet" href="/jair.github.io/style.css">
+</head>
+<body>
+<nav>
+  <div class="logo">PURPLE LIGHTNING</div>
+  <ul>
+    <li><a href="/jair.github.io/index.html">Home</a></li>
+    <li class="dropdown">
+      <a href="#">Shop ▼</a>
+      <ul class="dropdown-menu">
+        <li><a href="#packs">Packs</a></li>
+        <li><a href="#singles">Singles</a></li>
+        <li><a href="#noglins">Noglins</a></li>
+        <li><a href="#reapers">Reapers</a></li>
+        <li><a href="#capped">Capped Tames</a></li>
+        <li><a href="#dedis">Dedis</a></li>
+        <li><a href="#caves">Custom Caves</a></li>
+        <li><a href="#ascension">Ascension</a></li>
+        <li><a href="#gcm">GCM Time</a></li>
+        <li><a href="#grace">GRACE</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Discord Login</a></li>
+  </ul>
+  <div class="user-profile" id="userProfile" style="display:none;">
+    <img src="" alt="Profile" id="pfp">
+    <span id="username"></span>
+  </div>
+</nav>
+
+<div class="bg"></div>
+
+<section id="shop">
+  <h2>Donation Shop</h2>
+
+  <!-- Packs Tab -->
+  <div class="tab-content active" id="packs">
+    <h3>Packs</h3>
+    <div class="card">
+      <h4>$5 – Spark Pack 🦖🦖</h4>
+      <ul>
+        <li>3 Breeding Pairs 🦖🦖</li>
+        <li>1 Unbreedable 🐉</li>
+        <li>3 Blueprints 📜</li>
+        <li>2 Dedis ⚡</li>
+        <li>Donator Role 👑</li>
+      </ul>
+      <a class="button" href="#orderForm" onclick="selectPack('Spark Pack', 5)">Buy Now</a>
+    </div>
+    <!-- Add other packs similarly -->
+  </div>
+
+  <!-- Singles Tab -->
+  <div class="tab-content" id="singles">
+    <h3>Singles</h3>
+    <div class="card">
+      <ul>
+        <li>1 Pair – $1 🦖🦖</li>
+        <li>2 Pairs – $2 🦖🦖</li>
+      </ul>
+      <a class="button" href="#orderForm" onclick="selectPack('Singles', 1)">Buy Now</a>
+    </div>
+  </div>
+
+  <!-- Noglins Tab -->
+  <div class="tab-content" id="noglins">
+    <h3>Noglins</h3>
+    <div class="card">
+      <ul>
+        <li>Noglins – $2 👹</li>
+      </ul>
+      <a class="button" href="#orderForm" onclick="selectPack('Noglins', 2)">Buy Now</a>
+    </div>
+  </div>
+
+  <!-- Reapers Tab -->
+  <div class="tab-content" id="reapers">
+    <h3>Reapers</h3>
+    <div class="card">
+      <ul>
+        <li>Reaper Queen – $15 👹</li>
+        <li>Flex Capped Reaper Queen – $35 👹</li>
+      </ul>
+      <a class="button" href="#orderForm" onclick="selectPack('Reapers', 15)">Buy Now</a>
+    </div>
+  </div>
+
+  <!-- Capped Tames Tab -->
+  <div class="tab-content" id="capped">
+    <h3>Capped Tames</h3>
+    <div class="card">
+      <ul>
+        <li>Single – $5 🦖</li>
+        <li>Double – $10 🦖🦖</li>
+        <li>Triple – $15 🦖🦖🦖</li>
+        <li>Flex – $20 🦖🦖🦖🦖</li>
+      </ul>
+      <a class="button" href="#orderForm" onclick="selectPack('Capped Tames', 5)">Buy Now</a>
+    </div>
+  </div>
+
+  <!-- Dedis, Custom Caves, Ascension, GCM, GRACE – same structure -->
+
+  <!-- Order Form -->
+  <div id="orderForm" class="card">
+    <h3>Place Your Order</h3>
+    <form id="shopForm">
+      <label>Discord Username:</label>
+      <input type="text" name="discord" required>
+      <label>In-Game Name:</label>
+      <input type="text" name="ign" required>
+      <label>Map:</label>
+      <input type="text" name="map" required>
+      <label>Tribe Name:</label>
+      <input type="text" name="tribe" required>
+      <label>Selected Pack / Item:</label>
+      <input type="text" name="item" id="selectedItem" readonly>
+      <label>Price ($):</label>
+      <input type="text" name="price" id="selectedPrice" readonly>
+      <label>Preferred Dinos / Extras:</label>
+      <input type="text" name="extras">
+      <label>Payment Method:</label>
+      <select name="payment">
+        <option>PayPal</option>
+        <option>Cash App</option>
+        <option>Card</option>
+      </select>
+      <button type="submit" class="button">Submit Order</button>
+    </form>
+  </div>
+</section>
+
+<script src="/jair.github.io/script.js"></script>
+</body>
+</html>

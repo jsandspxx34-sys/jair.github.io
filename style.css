@@ -1,211 +1,186 @@
-/* General */
+/* GENERAL */
 body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    color: white;
-    background: #12001a;
+  margin:0;
+  padding:0;
+  font-family: Arial, sans-serif;
+  color: white;
+  background: #12001a;
+  overflow-x: hidden;
 }
 
-/* Background animation */
+/* BACKGROUND ANIMATION */
 .bg {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(120deg,#12001a,#350060,#6c00c8);
-    background-size: 300% 300%;
-    animation: gradientMove 12s ease infinite;
-    z-index: -1;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg,#12001a,#350060,#6c00c8);
+  background-size: 300% 300%;
+  animation: gradientMove 12s ease infinite;
+  z-index: -1;
 }
 @keyframes gradientMove {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
+  0% {background-position:0% 50%;}
+  50% {background-position:100% 50%;}
+  100% {background-position:0% 50%;}
 }
 
-/* Navbar */
+/* NAVBAR */
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    background: rgba(0,0,0,0.4);
-    backdrop-filter: blur(10px);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding: 15px 30px;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 10;
 }
 
 nav .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #bb60ff;
-    text-shadow: 0 0 10px #bb60ff;
+  font-size: 24px;
+  font-weight: bold;
+  color:#bb60ff;
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  position: relative;
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    transition: 0.2s;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 5px 10px;
+  transition: 0.3s;
 }
 
 nav ul li a:hover {
-    color: #ff00ff;
-    text-shadow: 0 0 5px #ff00ff, 0 0 10px #bb60ff;
+  color: #fffa00;
 }
 
-/* User profile */
+/* DROPDOWN */
+nav ul li .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+  padding: 10px 0;
+  border-radius: 8px;
+  min-width: 150px;
+  z-index: 200;
+  transition: all 0.3s ease;
+}
+
+nav ul li .dropdown-menu li a {
+  display: block;
+  padding: 8px 15px;
+  color: white;
+}
+
+nav ul li.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* USER PROFILE */
 .user-profile {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .user-profile img {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    border: 2px solid #bb60ff;
+  width:35px;
+  height:35px;
+  border-radius:50%;
+  border: 2px solid #bb60ff;
 }
 
-/* Section headers */
-section h1, section h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #ffccff;
-    text-shadow: 0 0 10px #bb60ff;
+/* SECTIONS */
+section {
+  padding: 80px 20px;
+  text-align: center;
 }
 
-/* Tabs */
-.tabs {
-    display: flex;
-    overflow-x: auto;
-    white-space: nowrap;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #bb60ff;
 }
 
-.tabs::-webkit-scrollbar {
-    height: 8px;
-}
-
-.tabs::-webkit-scrollbar-thumb {
-    background: #bb60ff;
-    border-radius: 4px;
-}
-
-.tab-btn {
-    flex: 0 0 auto;
-    padding: 10px 15px;
-    margin: 0 5px;
-    background: rgba(255,255,255,0.1);
-    border: none;
-    border-radius: 8px;
-    color: white;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.tab-btn:hover {
-    background: #bb60ff;
-    box-shadow: 0 0 10px #bb60ff;
-}
-
-.tab-btn.active {
-    background: #bb60ff;
-    box-shadow: 0 0 20px #bb60ff;
-}
-
-/* Tab content */
-.tab-content {
-    display: none;
-    text-align: center;
-}
-
-.tab-content.active {
-    display: block;
-}
-
-/* Cards */
+/* CARDS */
 .card {
-    background: rgba(255,255,255,0.05);
-    padding: 20px;
-    margin: 20px auto;
-    width: 300px;
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 0 15px #bb60ff;
-    transition: transform 0.3s, box-shadow 0.3s;
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  margin: 20px auto;
+  width: 280px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px #6c00c8, 0 0 30px #bb60ff inset;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 30px #ff00ff, 0 0 20px #bb60ff;
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px #bb60ff, 0 0 40px #ff00ff inset;
 }
 
-/* Buttons */
+/* BUTTONS */
 .button {
-    display: inline-block;
-    background: #bb60ff;
-    padding: 10px 20px;
-    margin-top: 10px;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    box-shadow: 0 0 10px #bb60ff;
-    transition: 0.3s;
+  display: inline-block;
+  background: #bb60ff;
+  padding: 10px 20px;
+  margin-top: 10px;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #bb60ff;
+  transition: 0.3s;
 }
 
 .button:hover {
-    background: #ff00ff;
-    box-shadow: 0 0 20px #ff00ff, 0 0 10px #bb60ff;
+  background: #ff00ff;
+  box-shadow: 0 0 15px #ff00ff;
 }
 
-/* Order form */
-#orderForm {
-    max-width: 400px;
+/* TAB CONTENT */
+.tab-content {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
-#orderForm form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-#orderForm label {
-    font-weight: bold;
-    text-align: left;
-}
-
-#orderForm input, #orderForm select, #orderForm button {
-    padding: 8px;
-    border-radius: 6px;
-    border: none;
-    outline: none;
+/* ORDER FORM */
+#orderForm input, #orderForm select {
+  width: 90%;
+  padding: 8px;
+  margin: 5px auto;
+  display: block;
+  border-radius: 5px;
+  border: none;
+  outline: none;
 }
 
 #orderForm button {
-    cursor: pointer;
-    background: #bb60ff;
-    color: white;
-    box-shadow: 0 0 10px #bb60ff;
+  width: 50%;
+  margin-top: 15px;
 }
 
-#orderForm button:hover {
-    background: #ff00ff;
-    box-shadow: 0 0 20px #ff00ff, 0 0 10px #bb60ff;
-}
-
-/* Responsive */
-@media(max-width: 500px){
-    .card {
-        width: 90%;
-    }
+/* RESPONSIVE */
+@media screen and (max-width:768px){
+  nav ul {
+    flex-direction: column;
+    gap:10px;
+  }
+  .card {
+    width: 90%;
+  }
 }
