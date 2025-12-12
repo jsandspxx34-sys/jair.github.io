@@ -4,7 +4,7 @@ document.querySelectorAll('.dropdown > a').forEach(drop => {
         e.preventDefault();
         const menu = drop.nextElementSibling;
         document.querySelectorAll('.dropdown-menu').forEach(m => {
-            if(m !== menu) m.style.display = 'none';
+            if (m !== menu) m.style.display = 'none';
         });
         menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
     });
