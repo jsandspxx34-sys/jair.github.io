@@ -1,0 +1,10 @@
+body, html {margin:0; padding:0; font-family:Arial,sans-serif; color:white;} 
+.bg {position:fixed;width:100%;height:100%; background:linear-gradient(120deg,#12001a,#350060,#6c00c8); background-size:300% 300%; animation:gradientMove 12s ease infinite; z-index:-1;} 
+@keyframes gradientMove {0% {background-position:0% 50%;} 50% {background-position:100% 50%;} 100% {background-position:0% 50%;} } 
+nav {display:flex; justify-content:space-between; padding:20px; background:rgba(0,0,0,0.4); backdrop-filter:blur(10px);} 
+nav .logo {font-size:24px; font-weight:bold; color:#bb60ff;} 
+nav ul {list-style:none; display:flex; gap:20px;} 
+nav ul li a {color:white; text-decoration:none; font-size:18px;} 
+section {padding:80px 20px; text-align:center;} 
+.card {background:rgba(255,255,255,0.1); padding:20px; margin:auto; width:250px; border-radius:15px; backdrop-filter:blur(10px); box-shadow:0 0 20px #6c00c8;} 
+.button {display:inline-block; background:#bb60ff; padding:10px 20px; margin-top:10px; color:white; text-decoration:none; border-radius:8px; box-shadow:0 0 10px #bb60ff;} 
