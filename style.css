@@ -13,3 +13,35 @@ section {padding:80px 20px; text-align:center;}
 .tab-btn.active {background:#bb60ff;}
 .tab-content {display:none;}
 .tab-content.active {display:block;}
+.tabs {
+    display: flex;
+    overflow-x: auto;       /* Allow horizontal scrolling */
+    white-space: nowrap;    /* Keep buttons in one line */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    scrollbar-width: thin;  /* Thin scrollbar for Firefox */
+}
+
+.tabs::-webkit-scrollbar {
+    height: 8px;
+}
+
+.tabs::-webkit-scrollbar-thumb {
+    background: #bb60ff;
+    border-radius: 4px;
+}
+
+.tab-btn {
+    flex: 0 0 auto;         /* Prevent buttons from shrinking */
+    padding: 10px 15px;
+    margin: 0 5px;
+    background: rgba(255,255,255,0.1);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+}
+
+.tab-btn.active {
+    background: #bb60ff;
+}
