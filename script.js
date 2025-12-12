@@ -69,3 +69,17 @@ window.addEventListener("resize", () => {
     canvas.height = window.innerHeight;
     init();
 });
+.icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.card ul {
+    list-style: none;
+    padding-left: 0;
+    text-align: left;
+}
+.card ul li {
+    margin: 6px 0;
+}

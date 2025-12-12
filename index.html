@@ -1,39 +1,182 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-<head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Purple Lightning Shop</title> 
-    <link rel="stylesheet" href="style.css"> 
-</head> 
-<body> 
-    <div class="bg"></div> 
-    <nav> 
-        <h1 class="logo">PURPLE LIGHTNING</h1> 
-        <ul> 
-            <li><a href="#shop">Shop</a></li> 
-            <li><a href="#donate">Donate</a></li> 
-            <li><a href="#discord">Discord</a></li> 
-        </ul> 
-    </nav> 
-    <section id="shop"> 
-        <h2>Shop</h2> 
-        <div class="card"> 
-            <h3>Example Product</h3> 
-            <p>$5.00</p> 
-            <a class="button" href="https://www.paypal.com">Buy Now</a> 
-        </div> 
-    </section> 
-    <section id="donate"> 
-        <h2>Donations</h2> 
-        <p>Support us ❤️</p> 
-        <a class="button" href="https://ko-fi.com">Donate</a> 
-    </section> 
-    <section id="discord"> 
-        <h2>Discord Login</h2> 
-        <p>Connect to Discord</p> 
-        <a class="button" href="https://discord.com/oauth2/authorize">Login with Discord</a> 
-    </section> 
-<script src="script.js"></script> 
-</body> 
-</html> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Purple Lightning Donation Shop</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigation / Logo -->
+<nav>
+  <div class="logo">PURPLE LIGHTNING</div>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Shop</a></li>
+    <li><a href="#">Discord Login</a></li>
+    <li><a href="#">Donations</a></li>
+  </ul>
+</nav>
+
+<!-- Background -->
+<div class="bg"></div>
+
+<!-- Shop Section -->
+<section id="shop">
+  <h2>Donation Shop</h2>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <button class="tab-btn active" data-target="packs">Packs</button>
+    <button class="tab-btn" data-target="singles">Singles</button>
+    <button class="tab-btn" data-target="noglins">Noglins</button>
+    <button class="tab-btn" data-target="reapers">Reapers</button>
+    <button class="tab-btn" data-target="capped">Capped Tames</button>
+    <button class="tab-btn" data-target="dedis">Dedis</button>
+    <button class="tab-btn" data-target="caves">Custom Caves</button>
+    <button class="tab-btn" data-target="ascension">Ascension</button>
+    <button class="tab-btn" data-target="gcm">GCM Time</button>
+    <button class="tab-btn" data-target="grace">GRACE</button>
+  </div>
+
+  <!-- Tab Contents -->
+  <div class="tab-content active" id="packs">
+    <div class="card">
+      <h3>$5 – Spark Pack</h3>
+      <ul>
+        <li>3 Breeding Pairs</li>
+        <li>1 Unbreedable</li>
+        <li>3 Blueprints</li>
+        <li>2 Dedis (No BBS)</li>
+        <li>Donator Role</li>
+      </ul>
+      <a class="button" href="#">Buy Now</a>
+    </div>
+    <div class="card">
+      <h3>$10 – Bolt Pack</h3>
+      <ul>
+        <li>5 Breeding Pairs</li>
+        <li>3 Unbreedables</li>
+        <li>5 Blueprints</li>
+        <li>5 Dedis (No BBS)</li>
+        <li>Donator Role</li>
+      </ul>
+      <a class="button" href="#">Buy Now</a>
+    </div>
+    <!-- Add more packs here -->
+  </div>
+
+  <div class="tab-content" id="singles">
+    <div class="card">
+      <h3>Example Single Item</h3>
+      <ul><li>1 Breeding Pair</li></ul>
+      <a class="button" href="#">Buy Now</a>
+    </div>
+  </div>
+
+  <div class="tab-content" id="noglins">
+    <div class="card">
+      <h3>Noglins</h3>
+      <ul><li>Noglin – $2</li></ul>
+      <a class="button" href="#">Buy Now</a>
+    </div>
+  </div>
+
+  <div class="tab-content" id="reapers">
+    <div class="card">
+      <h3>Reapers</h3>
+      <ul>
+        <li>Reaper Queen – $15</li>
+        <li>Flex Capped Reaper Queen – $35</li>
+      </ul>
+      <a class="button" href="#">Buy Now</a>
+    </div>
+  </div>
+
+  <div class="tab-content" id="capped">
+    <div class="card">
+      <h3>Capped Tames</h3>
+      <ul>
+        <li>Single – $5</li>
+        <li>Double – $10</li>
+        <li>Triple – $15</li>
+        <li>Flex – $20</li>
+      </ul>
+      <a class="button" href="#">Buy Now</a>
+    </div>
+  </div>
+
+  <div class="tab-content" id="dedis">
+    <div class="card">
+      <h3>Dedis</h3>
+      <ul>
+        <li>Example Dedi Item – $10</li>
+      </ul>
+      <a class="button" href="#">Buy Now</a>
+    </div>
+  </div>
+
+  <div class="tab-content" id="caves">
+    <div class="card">
+      <h3>Custom Caves</h3>
+      <ul>
+        <li>Rex – $5</li>
+        <li>Stego – $12</li>
+        <li>Carbo – $15</li>
+        <li>Peli – $20</li>
+        <li>Player – $25</li>
+        <li>Blocked – $10</li>
+      </ul>
+      <a class="button" href="#">Buy Now</a>
+    </div>
+  </div>
+
+  <div class="tab-content" id="ascension">
+    <div class="card">
+      <h3>Ascension</h3>
+      <ul>
+        <li>$15 per Player</li>
+        <li>$30 per Tribe</li>
+      </ul>
+      <a class="button" href="#">Buy Now</a>
+    </div>
+  </div>
+
+  <div class="tab-content" id="gcm">
+    <div class="card">
+      <h3>GCM Time</h3>
+      <ul>
+        <li>1 min – $1</li>
+        <li>2 mins – $3</li>
+        <li>3 mins – $5</li>
+        <li>5 mins – $9</li>
+        <li>10 mins – $15</li>
+        <li>30 mins – $30</li>
+        <li>1 hr – $40</li>
+        <li>2 hrs – $50</li>
+        <li>3 hrs – $60</li>
+      </ul>
+      <a class="button" href="#">Buy Now</a>
+    </div>
+  </div>
+
+  <div class="tab-content" id="grace">
+    <div class="card">
+      <h3>GRACE</h3>
+      <ul>
+        <li>1 hr – $15</li>
+        <li>2 hrs – $25</li>
+        <li>4 hrs – $35</li>
+        <li>8 hrs – $55</li>
+        <li>24 hrs – $70</li>
+      </ul>
+      <a class="button" href="#">Buy Now</a>
+    </div>
+  </div>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
