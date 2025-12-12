@@ -1,11 +1,29 @@
-// SELECT PACK FOR ORDER FORM
+// Dropdown toggle on click
+document.querySelectorAll('.dropdown > a').forEach(drop => {
+    drop.addEventListener('click', e => {
+        e.preventDefault();
+        const menu = drop.nextElementSibling;
+        document.querySelectorAll('.dropdown-menu').forEach(m => {
+            if(m !== menu) m.style.display = 'none';
+        });
+        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    });
+});
+
+document.addEventListener('click', e => {
+    if(!e.target.closest('.dropdown')) {
+        document.querySelectorAll('.dropdown-menu').forEach(m => m.style.display = 'none');
+    }
+});
+
+// Buy Now → auto-fill order form
 function selectPack(name, price){
   document.getElementById('selectedItem').value = name;
   document.getElementById('selectedPrice').value = price;
   document.getElementById('orderForm').scrollIntoView({behavior:'smooth'});
 }
 
-// DROPDOWN TAB SWITCHING
+// Tabs switching
 document.querySelectorAll('.dropdown-menu a').forEach(link => {
   link.addEventListener('click', e => {
     e.preventDefault();
@@ -15,7 +33,7 @@ document.querySelectorAll('.dropdown-menu a').forEach(link => {
   });
 });
 
-// DONOR WALL
+// Donor Wall
 const donorList = document.getElementById('donorList');
 if(donorList){
   const donors = [
@@ -26,7 +44,18 @@ if(donorList){
   donorList.innerHTML = donors.map(d => `<li>${d.rank}️⃣ ${d.name} – $${d.amount} – ${d.pack}</li>`).join('');
 }
 
-// PARTICLES (Optimized)
+// Discord login placeholder
+document.getElementById('discordLogin').addEventListener('click', e => {
+    e.preventDefault();
+    const username = prompt("Enter your Discord username:");
+    if(username){
+        document.getElementById('username').innerText = username;
+        document.getElementById('pfp').src = "https://cdn.discordapp.com/embed/avatars/0.png";
+        document.getElementById('userProfile').style.display = 'flex';
+    }
+});
+
+// Particle animation
 const canvas = document.createElement('canvas');
 canvas.id = 'particle-canvas';
 document.body.appendChild(canvas);
