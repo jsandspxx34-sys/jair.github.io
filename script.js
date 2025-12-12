@@ -33,17 +33,6 @@ document.querySelectorAll('.dropdown-menu a').forEach(link => {
   });
 });
 
-// Donor Wall
-const donorList = document.getElementById('donorList');
-if(donorList){
-  const donors = [
-    {rank:1,name:'User1',amount:150,pack:'Spark Pack'},
-    {rank:2,name:'User2',amount:100,pack:'Bolt Pack'},
-    {rank:3,name:'User3',amount:50,pack:'Single Dino'}
-  ];
-  donorList.innerHTML = donors.map(d => `<li>${d.rank}️⃣ ${d.name} – $${d.amount} – ${d.pack}</li>`).join('');
-}
-
 // Discord login placeholder
 document.getElementById('discordLogin').addEventListener('click', e => {
     e.preventDefault();
